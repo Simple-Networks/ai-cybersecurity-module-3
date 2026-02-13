@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Debugger</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/favicon.ico">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="/" class="nav-link">Chat</a>
+        <a href="/tools" class="nav-link active">Tools</a>
+        <a href="/faq" class="nav-link">FAQ</a>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Innovate Inc. HR Assistant - Tools Debugger</h1>
+        </header>
+        <main>
+            <div id="query-container">
+                <form id="tool-form">
+                    <input type="text" id="query-input" value="Run ping google.ca" readonly>
+                    <button type="submit" id="send-button">Send</button>
+                </form>
+            </div>
+            <div id="processing-indicator" style="display: none;">Processing...</div>
+            <div id="response-container">
+                <pre id="response-output"></pre>
+            </div>
+        </main>
+    </div>
+    <script src="/static/tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+services:
+  # Your FastAPI Application Service
+  app-mod3:
+    build: . # Build the image from the Dockerfile in the current directory
+    ports:
+      - "8000:8000" # Map host port 8000 to container port 8000
+    environment:
+      - OLLAMA_HOST=http://ollama-mod3:11434
+    depends_on:
+      - ollama-mod3 # Ensures ollama starts before your app
+    restart: on-failure
+
+  # For GPU instructions https://docs.ollama.com/docker
+  ollama-mod3:
+    image: ollama/ollama:0.13.1-rc0@sha256:661aa2ffcced839ac5d132c52ee6c7d609a601d821ed8e6a4e651fdff79c9c0a
+    ports:
+      - "11434:11434" # Expose the Ollama API port to the host for debugging
+    volumes:
+      - ollama_data:/root/.ollama # Persist models in a named volume
+
+volumes:
+  ollama_data:

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Innovate Inc. HR Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/favicon.ico">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="/" class="nav-link">Chat</a>
+        <a href="/tools" class="nav-link">Tools</a>
+        <a href="/faq" class="nav-link active">FAQ</a>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Innovate Inc. HR Assistant - FAQ</h1>
+        </header>
+        <main>
+            <div id="query-container">
+                <form id="faq-form">
+                    <select id="question-select" class="faq-input">
+                        <option value="What are the company holidays?">What are the company holidays?</option>
+                        <option value="How much PTO do we have?">How much PTO do we have?</option>
+                        <option value="What is our developer salary?">What is our developer salary?</option>
+                        <option value="What career path options are there?">What career path options are there?</option>
+                    </select>
+                    <input type="text" id="mcp-server-input" class="faq-input" placeholder="Optional MCP Server URL">
+                    <button type="submit" id="send-button">Send</button>
+                </form>
+            </div>
+            <div id="processing-indicator" style="display: none;">Processing...</div>
+            <div id="response-container">
+                <pre id="response-output"></pre>
+            </div>
+        </main>
+    </div>
+    <script src="/static/faq.js"></script>
+</body>
+</html>

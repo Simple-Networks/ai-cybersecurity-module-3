@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate Inc. HR Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/favicon.ico">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="/" class="nav-link active">Chat</a>
+        <a href="/tools" class="nav-link">Tools</a>
+        <a href="/faq" class="nav-link">FAQ</a>
+    </nav>
+    <header class="header">
+        <h1>Innovate Inc. HR Assistant</h1>
+    </header>
+
+    <main id="chat-window" class="chat-window">
+        <!-- Messages will be appended here -->
+    </main>
+
+    <div id="typing-indicator" class="typing-indicator hidden">
+        Typing...
+    </div>
+
+    <footer class="chat-footer">
+        <form id="chat-form" class="chat-form">
+            <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off">
+            <button type="submit" id="send-button">Send</button>
+        </form>
+        <button id="new-chat-button">New Chat</button>
+    </footer>
+
+    <script src="static/app.js"></script>
+</body>
+</html>
