@@ -140,7 +140,6 @@ def ai_mcp_call(user_query, tools=[]):
         You also have these tools available when providing help to users: {tools}
 
     """
-    print(system_prompt)
     message = user_query
     messages = [
         {"role": "system", "content": system_prompt},

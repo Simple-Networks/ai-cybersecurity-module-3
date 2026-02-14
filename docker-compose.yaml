@@ -18,5 +18,11 @@ services:
     volumes:
       - ollama_data:/root/.ollama # Persist models in a named volume
 
+  mcp-server:
+    build: ./mcp-server
+    ports:
+      - "8080:8080"
+    restart: on-failure
+
 volumes:
   ollama_data:
